@@ -2,12 +2,14 @@ package launaybecue_gregoire.tp1;
 
 public class Exo10 {
     public static int findGCD(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+        if (a == b) {
+            return a;
         }
-        return a;
+        if (a > b) {
+            return findGCD(a - b, b);
+        } else {
+            return findGCD(a, b - a);
+        }
     }
 
     public static void main(String[] args) {
