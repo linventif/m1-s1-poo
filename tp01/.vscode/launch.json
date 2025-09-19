@@ -1,0 +1,14 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Run App",
+			"request": "launch",
+			"mainClass": "launaybecue_gregoire.tp1.Main",
+			"projectName": "tp01",
+			"cwd": "${workspaceFolder}",
+			"classPaths": ["${workspaceFolder}/target/classes"]
+		}
+	]
+}
