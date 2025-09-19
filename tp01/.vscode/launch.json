@@ -3,6 +3,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Exo11",
+			"request": "launch",
+			"mainClass": "launaybecue_gregoire.tp1.Exo11",
+			"projectName": "tp01"
+		},
+		{
+			"type": "java",
 			"name": "Exo10",
 			"request": "launch",
 			"mainClass": "launaybecue_gregoire.tp1.Exo10",

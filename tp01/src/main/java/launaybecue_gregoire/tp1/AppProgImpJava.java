@@ -7,5 +7,6 @@ public class AppProgImpJava {
         Exo03.main(args);
         Exo04.main(args);
         Exo10.main(args);
+        Exo11.main(args);
     }
 }
