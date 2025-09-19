@@ -16,8 +16,9 @@ public class AppProgImpJava {
      * Programme principal.
      */
     public static void main(String[] args) {
-        /*----- Zone pour tester vos sous-programmes -----*/
-
+        // 1) Retourne si un nombre entier est diviseur d’un autre.
+        System.out.println(estDiviseur(10, 2)); // true
+        System.out.println(estDiviseur(10, 3)); // false
     }
 
 } /*----- Fin de la classe AppProgImpJava -----*/

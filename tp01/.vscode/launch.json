@@ -3,6 +3,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "AppProgImpJava",
+			"request": "launch",
+			"mainClass": "launaybecue_gregoire.tp1.AppProgImpJava",
+			"projectName": "tp01"
+		},
+		{
+			"type": "java",
 			"name": "Run App",
 			"request": "launch",
 			"mainClass": "launaybecue_gregoire.tp1.Main",
