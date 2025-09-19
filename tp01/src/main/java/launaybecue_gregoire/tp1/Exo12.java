@@ -1,5 +1,7 @@
 package launaybecue_gregoire.tp1;
 
+import java.util.Arrays;
+
 public class Exo12 {
     public static String generateRandomTable(int size, int min, int max) {
         int[] tbl = new int[size];
@@ -8,7 +10,7 @@ public class Exo12 {
             tbl[i] = (int) (Math.random() * (max - min + 1)) + min;
         }
 
-        return java.util.Arrays.toString(tbl);
+        return Arrays.toString(tbl);
     }
 
     public static void main(String[] args) {
