@@ -4,6 +4,7 @@ public class AppProgImpJava {
     public static void main(String[] args) {
         Exo01.main(args);
         Exo02.main(args);
+        Exo03.main(args);
     }
 
 }
