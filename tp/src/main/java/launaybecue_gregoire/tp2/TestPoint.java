@@ -1,6 +1,6 @@
 package launaybecue_gregoire.tp2;
 
-public class Main {
+public class TestPoint {
   public static void main(String[] args) {
     Point p1 = new Point(3, 4);
     Point p2 = new Point(3, 4);

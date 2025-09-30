@@ -3,6 +3,20 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "TestPoint",
+			"request": "launch",
+			"mainClass": "launaybecue_gregoire.tp2.TestPoint",
+			"projectName": "tp01"
+		},
+		{
+			"type": "java",
+			"name": "TestCercle",
+			"request": "launch",
+			"mainClass": "launaybecue_gregoire.tp2.TestCercle",
+			"projectName": "tp01"
+		},
+		{
+			"type": "java",
 			"name": "Main",
 			"request": "launch",
 			"mainClass": "launaybecue_gregoire.tp2.Main",
