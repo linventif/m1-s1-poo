@@ -13,38 +13,42 @@ public class Scable {
   // 8 points: J ×1, X ×1
   // 10 points: Q ×1, Z ×1
 
-  private static HashMap<Character, Integer> letterPoints = new HashMap<>();
+  private static HashMap<String, HashMap<Character, Integer>> dictionary = new HashMap<>();
+
   static {
-    letterPoints.put('E', 1);
-    letterPoints.put('A', 1);
-    letterPoints.put('I', 1);
-    letterPoints.put('O', 1);
-    letterPoints.put('N', 1);
-    letterPoints.put('R', 1);
-    letterPoints.put('T', 1);
-    letterPoints.put('L', 1);
-    letterPoints.put('S', 1);
-    letterPoints.put('U', 1);
-    letterPoints.put('D', 2);
-    letterPoints.put('G', 2);
-    letterPoints.put('B', 3);
-    letterPoints.put('C', 3);
-    letterPoints.put('M', 3);
-    letterPoints.put('P', 3);
-    letterPoints.put('F', 4);
-    letterPoints.put('H', 4);
-    letterPoints.put('V', 4);
-    letterPoints.put('W', 4);
-    letterPoints.put('Y', 4);
-    letterPoints.put('K', 5);
-    letterPoints.put('J', 8);
-    letterPoints.put('X', 8);
-    letterPoints.put('Q', 10);
-    letterPoints.put('Z', 10);
+    HashMap<Character, Integer> FRLetterPoint = new HashMap<>();
+    FRLetterPoint.put('E', 1);
+    FRLetterPoint.put('A', 1);
+    FRLetterPoint.put('I', 1);
+    FRLetterPoint.put('O', 1);
+    FRLetterPoint.put('N', 1);
+    FRLetterPoint.put('R', 1);
+    FRLetterPoint.put('T', 1);
+    FRLetterPoint.put('L', 1);
+    FRLetterPoint.put('S', 1);
+    FRLetterPoint.put('U', 1);
+    FRLetterPoint.put('D', 2);
+    FRLetterPoint.put('G', 2);
+    FRLetterPoint.put('B', 3);
+    FRLetterPoint.put('C', 3);
+    FRLetterPoint.put('M', 3);
+    FRLetterPoint.put('P', 3);
+    FRLetterPoint.put('F', 4);
+    FRLetterPoint.put('H', 4);
+    FRLetterPoint.put('V', 4);
+    FRLetterPoint.put('W', 4);
+    FRLetterPoint.put('Y', 4);
+    FRLetterPoint.put('K', 5);
+    FRLetterPoint.put('J', 8);
+    FRLetterPoint.put('X', 8);
+    FRLetterPoint.put('Q', 10);
+    FRLetterPoint.put('Z', 10);
+    dictionary.put("FR", FRLetterPoint);
   }
 
-  private static int calculPoint(String word) {
+  private static int calculPoint(String word, String language) {
     int score = 0;
+    HashMap<Character, Integer> letterPoints = dictionary.get(language);
     for (char c : word.toUpperCase().toCharArray()) {
       score += letterPoints.getOrDefault(c, 0);
     }
@@ -52,7 +56,8 @@ public class Scable {
   }
 
   public static void main(String[] args) {
-    String test = "zebra";
-    System.out.println("Le mot " + test + " vaut " + calculPoint(test) + " points.");
+    String testWord = "Bonjour";
+    String testLang = "FR";
+    System.out.println("Le mot " + testWord + " vaut " + calculPoint(testWord, testLang) + " points en français.");
   }
 }
