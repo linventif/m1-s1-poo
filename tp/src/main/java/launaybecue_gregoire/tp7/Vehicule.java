@@ -16,6 +16,18 @@ public class Vehicule {
     return poids;
   }
 
+  public double getHauteur() {
+    return hauteur;
+  }
+
+  public double getPoids() {
+    return poids;
+  }
+
+  public String toString() {
+    return nom + " (hauteur: " + hauteur + " m, poids: " + poids + " kg)";
+  }
+
   public static void main(String[] args) {
     /*----- Déclaration et instanciation du ferry -----*/
     Vehicule[] ferry = new Vehicule[5];
