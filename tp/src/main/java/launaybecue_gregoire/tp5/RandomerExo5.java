@@ -1,4 +1,4 @@
-package launaybecue_gregoire.tp4;
+package launaybecue_gregoire.tp5;
 
 public class RandomerExo5 {
   private static int size = 1000000;
