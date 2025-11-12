@@ -11,7 +11,7 @@ public class EnseignantChercheur extends Enseignant {
 
   @Override
   public double calculerSalaire() {
-    return SALAIRE_BASE
+    return SALAIRE_BASE * 12
         + (nbHeures > NB_HEURES_MAX ? (nbHeures - NB_HEURES_MAX) * PRIX_HEURE_SUPP : 0);
   }
 }
