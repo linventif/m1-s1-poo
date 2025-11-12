@@ -1,7 +1,7 @@
 package launaybecue_gregoire.tp7;
 
 public class Vehicule {
-  public static final int POIDS_PAR_PASSAGER = 0;
+  public static final int POIDS_PAR_PASSAGER = 75;
   protected String nom;
   protected double hauteur;
   protected double poids;
