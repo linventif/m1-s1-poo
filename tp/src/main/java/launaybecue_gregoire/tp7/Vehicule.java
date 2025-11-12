@@ -1,8 +1,7 @@
 package launaybecue_gregoire.tp7;
 
-import java.util.HashMap;
-
 public class Vehicule {
+  public static final int POIDS_PAR_PASSAGER = 0;
   protected String nom;
   protected double hauteur;
   protected double poids;
