@@ -1,6 +1,8 @@
 package launaybecue_gregoire.tp7;
 
-public class Vehicule {
+import java.util.Arrays;
+
+public class Vehicule implements Comparable<Vehicule> {
   public static final int POIDS_PAR_PASSAGER = 75;
   protected String nom;
   protected double hauteur;
@@ -28,6 +30,10 @@ public class Vehicule {
     return nom + " (hauteur: " + hauteur + " m, poids: " + poids + " kg)";
   }
 
+  public int compareTo(Vehicule v) {
+    return Double.compare(getHauteur(), v.getHauteur());
+  }
+
   public static void main(String[] args) {
     /*----- Déclaration et instanciation du ferry -----*/
     Vehicule[] ferry = new Vehicule[5];
@@ -44,5 +50,16 @@ public class Vehicule {
       chargeTotale += ferry[i].calculerCharge();
 
     System.out.println("Charge totale : " + chargeTotale);
+
+    System.out.println("\n=== Véhicules embarqués sur le ferry ===");
+    for (int i = 0; i < ferry.length; i++)
+      System.out.println(ferry[i]);
+
+    // sort ferry
+    Arrays.sort(ferry);
+
+    System.out.println("\n=== Véhicules embarqués sur le ferry (triés par hauteur) ===");
+    for (int i = 0; i < ferry.length; i++)
+      System.out.println(ferry[i]);
   }
 }
